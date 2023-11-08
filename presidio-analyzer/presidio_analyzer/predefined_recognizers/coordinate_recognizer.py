@@ -3,7 +3,7 @@ from typing import Optional, List, Tuple
 from presidio_analyzer import Pattern, PatternRecognizer
 
 
-class InPanRecognizer(PatternRecognizer):
+class CoordinateRecognizer(PatternRecognizer):
     """
     Recognizes coordinates.
 
@@ -64,7 +64,7 @@ class InPanRecognizer(PatternRecognizer):
         patterns: Optional[List[Pattern]] = None,
         context: Optional[List[str]] = None,
         supported_language: str = "en",
-        supported_entity: str = "IN_PAN",
+        supported_entity: str = "cordinate",
         replacement_pairs: Optional[List[Tuple[str, str]]] = None,
     ):
         self.replacement_pairs = (

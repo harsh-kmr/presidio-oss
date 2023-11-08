@@ -3,7 +3,7 @@ from typing import Optional, List, Tuple
 from presidio_analyzer import Pattern, PatternRecognizer
 
 
-class BloodGroupRecognizer(PatternRecognizer):
+class MACAddressRecognizer(PatternRecognizer):
     """
     Recognizes MAC Address using Regex pattern.
 
@@ -41,7 +41,7 @@ class BloodGroupRecognizer(PatternRecognizer):
         patterns: Optional[List[Pattern]] = None,
         context: Optional[List[str]] = None,
         supported_language: str = "en",
-        supported_entity: str = "BLOOD_GROUPS",
+        supported_entity: str = "MAC address",
         replacement_pairs: Optional[List[Tuple[str, str]]] = None,
     ):
         self.replacement_pairs = (

@@ -3,7 +3,7 @@ from typing import Optional, List, Tuple
 from presidio_analyzer import Pattern, PatternRecognizer
 
 
-class InDriverLicenceRecognizer(PatternRecognizer):
+class InLicencePlateRecognizer(PatternRecognizer):
     """
     List from https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_India
 
