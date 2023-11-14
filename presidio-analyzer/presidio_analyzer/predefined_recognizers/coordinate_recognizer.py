@@ -64,7 +64,7 @@ class CoordinateRecognizer(PatternRecognizer):
         patterns: Optional[List[Pattern]] = None,
         context: Optional[List[str]] = None,
         supported_language: str = "en",
-        supported_entity: str = "cordinate",
+        supported_entity: str = "coordinate",
         replacement_pairs: Optional[List[Tuple[str, str]]] = None,
     ):
         self.replacement_pairs = (
