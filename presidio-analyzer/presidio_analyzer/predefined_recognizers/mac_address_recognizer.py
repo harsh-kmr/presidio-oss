@@ -45,7 +45,7 @@ class MACAddressRecognizer(PatternRecognizer):
         replacement_pairs: Optional[List[Tuple[str, str]]] = None,
     ):
         self.replacement_pairs = (
-            replacement_pairs if replacement_pairs else [(" ", ""), ("-", ""), (".", "")]
+            replacement_pairs if replacement_pairs else [(" ", ""), ("-", ""), (".", ""), (":", "")]
         )
         patterns = patterns if patterns else self.PATTERNS
         context = context if context else self.CONTEXT

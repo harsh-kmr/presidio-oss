@@ -54,6 +54,8 @@ class InDriverLicenceRecognizer(PatternRecognizer):
         "driving credentials",
         "vehicle license",
         "driving ID",
+        "driver's license no",
+        "license no",
     ]
 
 

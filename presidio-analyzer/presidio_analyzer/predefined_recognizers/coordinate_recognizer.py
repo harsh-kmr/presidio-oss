@@ -56,6 +56,10 @@ class CoordinateRecognizer(PatternRecognizer):
         "GPS",
         "mapping coordinates",
         "geographical positions",
+        "geographical location",
+        "lat long",
+        "lat long co-ordinates",
+        "Map coordinates",
     ]
 
 

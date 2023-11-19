@@ -44,6 +44,9 @@ class InLicencePlateRecognizer(PatternRecognizer):
 
     CONTEXT = [
         "plate number",
+        "vehicle no",
+        "plate no",
+        "license plate no",
         "registration number",
         "vehicle identification",
         "vehicle plate number",

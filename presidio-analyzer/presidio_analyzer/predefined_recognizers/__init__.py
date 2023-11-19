@@ -38,7 +38,7 @@ from .blood_group_recognizer import BloodGroupRecognizer
 from .mac_address_recognizer import MACAddressRecognizer
 from .in_pan_recognizer import InPanRecognizer
 from .coordinate_recognizer import CoordinateRecognizer
-from .IN_LICENSE_PLATE_recognizer import InLicencePlateRecognizer
+from .in_license_plate_recognizer import InLicencePlateRecognizer
 from .in_pan_recognizer import InPanRecognizer
 
 NLP_RECOGNIZERS = {
