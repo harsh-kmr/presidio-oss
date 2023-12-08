@@ -38,7 +38,7 @@ class InDriverLicenceRecognizer(PatternRecognizer):
             0.8,
         ),
         Pattern(
-            "Indian Driver's License (Medium)",
+            "Indian Driver's License (low)",
             r"\b([A-Z]{2}(\d{2}|(\d{2}[a-zA-Z]))\d{11})\b",
             0.3,
         ),
