@@ -26,6 +26,7 @@ class BloodGroupRecognizer(PatternRecognizer):
         "blood type",
         "blood group",
         "Rh factor",
+        "Rh group",
         "serology",
     ]
 

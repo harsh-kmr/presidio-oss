@@ -32,8 +32,14 @@ from .au_abn_recognizer import AuAbnRecognizer
 from .au_acn_recognizer import AuAcnRecognizer
 from .au_tfn_recognizer import AuTfnRecognizer
 from .au_medicare_recognizer import AuMedicareRecognizer
+from .in_Aadhaar_recognizer import InAadhaarRecognizer
+from .in_drivers_licence_recognizer import InDriverLicenceRecognizer
+from .blood_group_recognizer import BloodGroupRecognizer
+from .mac_address_recognizer import MACAddressRecognizer
 from .in_pan_recognizer import InPanRecognizer
-
+from .coordinate_recognizer import CoordinateRecognizer
+from .in_license_plate_recognizer import InLicencePlateRecognizer
+from .in_pan_recognizer import InPanRecognizer
 
 NLP_RECOGNIZERS = {
     "spacy": SpacyRecognizer,
@@ -74,4 +80,10 @@ __all__ = [
     "ItIdentityCardRecognizer",
     "ItPassportRecognizer",
     "InPanRecognizer",
+    "InAadhaarRecognizer",
+    "InDriverLicenceRecognizer",
+    "BloodGroupRecognizer",
+    "MACAddressRecognizer",
+    "CoordinateRecognizer",
+    "InLicencePlateRecognizer",
 ]
