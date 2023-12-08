@@ -17,8 +17,13 @@ class InLicencePlateRecognizer(PatternRecognizer):
     PATTERNS = [
         Pattern(
             "Indian License Plate (High, Private and Commercial Vehicle License)",
-            r"\b((?i:(AN|AP|AR|AS|BH|BR|CH|CG|DD|DL|GA|GJ|HR|HP|JK|JH|KA|KL|LA|LD|MP|MH|MN|ML|MZ|NL|OD|PY|PB|RJ|SK|TN|TS|TR|UP|UK|WB|UA|DN|OR))\d{2}|(\d{2}[a-hj-np-zA-HJ-NP-Z])\d{4}\b",
+            r"\b((?i:(AN|AP|AR|AS|BH|BR|CH|CG|DD|DL|GA|GJ|HR|HP|JK|JH|KA|KL|LA|LD|MP|MH|MN|ML|MZ|NL|OD|PY|PB|RJ|SK|TN|TS|TR|UP|UK|WB|UA|DN|OR))\d{2}|(\d{3}[a-hj-np-zA-HJ-NP-Z])\d{4}\b",
             0.8,
+        ),
+        Pattern(
+            "Indian License Plate (low, Private and Commercial Vehicle License)",
+            r"\b[A-Za-z]{2}[0-9]{1,2}[A-Za-z]{0,2}[0-9]{4}\b",
+            0.3,
         ),
         Pattern(
             "Indian License Plate (high, Bharat series)",
@@ -38,10 +43,10 @@ class InLicencePlateRecognizer(PatternRecognizer):
     ]
 
     CONTEXT = [
-        "vehicle",
-        "plate",
-        "number",
-        "registration",
+        "plate number",
+        "vehicle no",
+        "plate no",
+        "license plate no",
         "registration number",
         "vehicle identification",
         "vehicle plate number",
@@ -50,7 +55,6 @@ class InLicencePlateRecognizer(PatternRecognizer):
         "VRN",
         "registration plate",
         "vehicle license",
-        "number identifier",
     ]
 
 

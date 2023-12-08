@@ -1,33 +1,30 @@
 import pytest
 
 from tests import assert_result
-from presidio_analyzer.predefined_recognizers import InAadhaarRecognizer
+from presidio_analyzer.predefined_recognizers import InDriverLicenceRecognizer
 
 
 @pytest.fixture(scope="module")
 def recognizer():
-    return InAadhaarRecognizer()
+    return InDriverLicenceRecognizer()
 
 
 @pytest.fixture(scope="module")
 def entities():
-    return ["IN_AADHAAR"]
+    return ["IN_DRIVING_LICENSE"]
 
 
 @pytest.mark.parametrize(
     "text, expected_len, expected_position, expected_score",
     [
         # fmt: off
-        ("2222222222", 1, (0,11), 0.8) ,
-        ("123456789012", 1, (0, 11), 0.8),
-        ("012345678901", 1, (0, 11), 0.6),
-        ("01234567890", 0, (),()),
-        ("ABCD1234",0,(),(),),
-        ("My Aadhaar number is 123456789012 with a lot of text beyond it", 1, (17,27),.8),
+        ("MH1420110062821", 1, (0,11), 0.8) ,
+        ("AB1256789012345", 1, (17,27),0.3),
+        ("I finally got my hands on my new driving license, and it's got the code AB1256789012345.", 1, (17,27),0.3),
         # fmt: on
     ],
 )
-def test_when_aadhaar_in_text_then_all_aadhaar_found(
+def test_when_driver_licence_in_text_then_all_driver_licence_found(
     text,
     expected_len,
     expected_position,

@@ -23,7 +23,7 @@ class MACAddressRecognizer(PatternRecognizer):
         Pattern(
             "MAC Address (low)",
             r"\b[0-9A-Za-z]{12}\b",
-            0.2,
+            0.1,
         )
     ]
 
@@ -41,11 +41,11 @@ class MACAddressRecognizer(PatternRecognizer):
         patterns: Optional[List[Pattern]] = None,
         context: Optional[List[str]] = None,
         supported_language: str = "en",
-        supported_entity: str = "MAC address",
+        supported_entity: str = "MAC_address",
         replacement_pairs: Optional[List[Tuple[str, str]]] = None,
     ):
         self.replacement_pairs = (
-            replacement_pairs if replacement_pairs else [(" ", ""), ("-", ""), (".", "")]
+            replacement_pairs if replacement_pairs else [(" ", ""), ("-", ""), (".", ""), (":", "")]
         )
         patterns = patterns if patterns else self.PATTERNS
         context = context if context else self.CONTEXT

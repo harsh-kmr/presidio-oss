@@ -1,33 +1,29 @@
 import pytest
 
 from tests import assert_result
-from presidio_analyzer.predefined_recognizers import InAadhaarRecognizer
+from presidio_analyzer.predefined_recognizers import BloodGroupRecognizer
 
 
 @pytest.fixture(scope="module")
 def recognizer():
-    return InAadhaarRecognizer()
+    return BloodGroupRecognizer()
 
 
 @pytest.fixture(scope="module")
 def entities():
-    return ["IN_AADHAAR"]
+    return ["BLOOD_GROUPS"]
 
 
 @pytest.mark.parametrize(
     "text, expected_len, expected_position, expected_score",
     [
         # fmt: off
-        ("2222222222", 1, (0,11), 0.8) ,
-        ("123456789012", 1, (0, 11), 0.8),
-        ("012345678901", 1, (0, 11), 0.6),
-        ("01234567890", 0, (),()),
-        ("ABCD1234",0,(),(),),
-        ("My Aadhaar number is 123456789012 with a lot of text beyond it", 1, (17,27),.8),
+        ("AB+", 1, (0,11), 0.2) ,
+        ("My blood group is O+ with a lot of text beyond it", 1, (17,27),0.2),
         # fmt: on
     ],
 )
-def test_when_aadhaar_in_text_then_all_aadhaar_found(
+def test_when_blood_group_in_text_then_all_blood_group_found(
     text,
     expected_len,
     expected_position,

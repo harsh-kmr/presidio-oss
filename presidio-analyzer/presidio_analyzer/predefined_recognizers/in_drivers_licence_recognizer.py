@@ -34,17 +34,12 @@ class InDriverLicenceRecognizer(PatternRecognizer):
     PATTERNS = [
         Pattern(
             "Indian Driver's License (High)",
-            r"\b((?i:AN|AP|AR|AS|BR|CG|CH|DD|DL|GA|GJ|HP|HR|JH|JK|KA|KL|LA|LD|MH|ML|MN|MP|MZ|NL|OD|PB|PY|RJ|SK|TN|TR|TS|UK|UP|WB)\d{2}|(\d{2}[a-zA-Z])(?:19|20)\d{2}\d{7})\b",
+            r"\b((?i:AN|AP|AR|AS|BR|CG|CH|DD|DL|GA|GJ|HP|HR|JH|JK|KA|KL|LA|LD|MH|ML|MN|MP|MZ|NL|OD|PB|PY|RJ|SK|TN|TR|TS|UK|UP|WB)(\d{2}|(\d{2}[a-zA-Z]))(?:19|20)\d{2}\d{7})\b",
             0.8,
         ),
         Pattern(
             "Indian Driver's License (Medium)",
-            r"\b([A-Z]{2}\d{2}|(\d{2}[a-zA-Z])\d{11})\b",
-            0.6,
-        ),
-        Pattern(
-            "Indian Driver's License (Low)",
-            r"\b([A-Za-z]{2}\d{13})\b",
+            r"\b([A-Z]{2}(\d{2}|(\d{2}[a-zA-Z]))\d{11})\b",
             0.3,
         ),
     ]
@@ -59,6 +54,8 @@ class InDriverLicenceRecognizer(PatternRecognizer):
         "driving credentials",
         "vehicle license",
         "driving ID",
+        "driver's license no",
+        "license no",
     ]
 
 
