@@ -18,8 +18,9 @@ def entities():
     "text, expected_len, expected_position, expected_score",
     [
         # fmt: off
-        ("AB+", 1, (0,11), 0.2) ,
-        ("My blood group is O+ with a lot of text beyond it", 1, (17,27),0.2),
+        ("AB+", 1, (0,2), 0.2) ,
+        ("g+", 0, (),()) ,
+        ("My blood group is O+ with a lot of text beyond it", 1, (18,19),0.2),
         # fmt: on
     ],
 )

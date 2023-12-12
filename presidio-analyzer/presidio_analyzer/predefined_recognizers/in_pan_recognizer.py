@@ -46,6 +46,8 @@ class InPanRecognizer(PatternRecognizer):
         "pan",
     ]
 
+    replacement_pairs = [("-", ""), (" ", "")] 
+
     def __init__(
         self,
         patterns: Optional[List[Pattern]] = None,

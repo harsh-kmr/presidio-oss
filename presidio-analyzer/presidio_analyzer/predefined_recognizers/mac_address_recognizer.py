@@ -34,7 +34,7 @@ class MACAddressRecognizer(PatternRecognizer):
     ]
 
 
-
+    replacement_pairs = [(" ", ""), ("-", ""), (".", ""), (":", "")]
 
     def __init__(
         self,

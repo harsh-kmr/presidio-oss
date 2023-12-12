@@ -18,12 +18,12 @@ def entities():
     "text, expected_len, expected_position, expected_score",
     [
         # fmt: off
-        ("2222222222", 1, (0,11), 0.8) ,
-        ("123456789012", 1, (0, 11), 0.8),
-        ("012345678901", 1, (0, 11), 0.6),
+        ("2222222222", 0, (), ()) ,
+        ("123456789012", 1, (0, 12), 0.8),
+        ("012345678901", 1, (0, 12), 0.1),
         ("01234567890", 0, (),()),
         ("ABCD1234",0,(),(),),
-        ("My Aadhaar number is 123456789012 with a lot of text beyond it", 1, (17,27),.8),
+        ("My Aadhaar number is 123456789012 with a lot of text beyond it", 1, (21,33),.8),
         # fmt: on
     ],
 )

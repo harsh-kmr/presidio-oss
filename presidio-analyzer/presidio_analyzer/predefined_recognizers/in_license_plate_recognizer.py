@@ -17,7 +17,7 @@ class InLicencePlateRecognizer(PatternRecognizer):
     PATTERNS = [
         Pattern(
             "Indian License Plate (High, Private and Commercial Vehicle License)",
-            r"\b((?i:(AN|AP|AR|AS|BH|BR|CH|CG|DD|DL|GA|GJ|HR|HP|JK|JH|KA|KL|LA|LD|MP|MH|MN|ML|MZ|NL|OD|PY|PB|RJ|SK|TN|TS|TR|UP|UK|WB|UA|DN|OR))\d{2}|(\d{3}[a-hj-np-zA-HJ-NP-Z])\d{4}\b",
+            r"\b((?i:(AN|AP|AR|AS|BH|BR|CH|CG|DD|DL|GA|GJ|HR|HP|JK|JH|KA|KL|LA|LD|MP|MH|MN|ML|MZ|NL|OD|PY|PB|RJ|SK|TN|TS|TR|UP|UK|WB|UA|DN|OR))\d{2}|(\d{3}[a-hj-np-zA-HJ-NP-Z])\d{4})",
             0.8,
         ),
         Pattern(
@@ -57,7 +57,7 @@ class InLicencePlateRecognizer(PatternRecognizer):
         "vehicle license",
     ]
 
-
+    replacement_pairs = [("-", ""), (" ", "")] 
 
     def __init__(
         self,

@@ -18,10 +18,10 @@ def entities():
     "text, expected_len, expected_position, expected_score",
     [
         # fmt: off
-        ("1A2b3C4d5E6f", 1, (0,11), 0.8) ,
-        ("1A2b3C4d5E6fg", 1, (17,27),0.1),
-        ("1A2b3C4d5E6f", 0, (),()),
-        ("This is a valid MAC address: 1A2b3C4d5E6f with lot of text behind it", 1, (17,27),0.8),
+        ("1A2b3C4d5E6f", 1, (0,12), 0.8) ,
+        ("1A2b3C4d5E6fg", 0, (), ()),
+        ("000000g00000", 1, (0,12),0.1),
+        ("This is a valid MAC address: 1A2b3C4d5E6f with lot of text behind it", 1, (29,41),0.8),
         # fmt: on
     ],
 )

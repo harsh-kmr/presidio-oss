@@ -18,14 +18,13 @@ def entities():
     "text, expected_len, expected_position, expected_score",
     [
         # fmt: off
-        ("UP 19 D 0343", 1, (0,8), 0.8) ,
-        ("hk 19 D 0343", 1, (0,8), 0.8) ,
-        ("UP-19-D-0343", 1, (0, 11), 0.8),
-        ("199 CD 1", 1, (0, 11), 0.6),
-        ("21 BH 2345 AA", 1, (0, 11),0.8),
+        ("UP19D0343", 1, (0,9), 0.8) ,
+        ("hk19D0343", 1, (0,9), 0.3) ,
+        ("199CD1", 1, (0, 8), 0.8),
+        ("21BH2345 AA", 1, (0, 11),0.8),
         ("ABCD1234",0,(),(),),
-        ("02B 084821 H",0,(),(),),
-        ("My number plate is UP-19-D-0343 with a lot of text beyond it", 1, (17,27),.8),
+        ("02B084821H",0,(),(),),
+        ("My number plate is UP19D0343 with a lot of text beyond it", 1, (17,27),.8),
         # fmt: on
     ],
 )

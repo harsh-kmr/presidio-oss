@@ -18,9 +18,9 @@ def entities():
     "text, expected_len, expected_position, expected_score",
     [
         # fmt: off
-        ("MH1420110062821", 1, (0,11), 0.8) ,
-        ("AB1256789012345", 1, (17,27),0.3),
-        ("I finally got my hands on my new driving license, and it's got the code AB1256789012345.", 1, (17,27),0.3),
+        ("MH1420110062821", 1, (0,15), 0.8) ,
+        ("AB1256789012345", 1, (0, 15),0.3),
+        ("I finally got my hands on my new driving license, and it's got the code AB1256789012345.", 1, (72,87),0.3),
         # fmt: on
     ],
 )
